@@ -120,3 +120,15 @@ struct corsair_device_driver corsairlink_driver_pro = {
     .write = corsairlink_pro_write
 };
 
+struct corsair_device_driver corsairlink_driver_dummy = {
+	.init = corsairlink_dummy_init,
+	.deinit = corsairlink_dummy_deinit,
+    .name = corsairlink_dummy_name,
+    .vendor = corsairlink_dummy_vendor,
+    .product = corsairlink_dummy_product,
+    .device_id = corsairlink_dummy_device_id,
+    .fw_version = corsairlink_dummy_firmware_id,
+    .read = corsairlink_dummy_read,
+    .write = corsairlink_dummy_write
+};
+

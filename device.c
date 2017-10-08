@@ -143,6 +143,30 @@ struct corsair_device_info corsairlink_devices[] = {
 	},
 	{
 		.vendor_id = 0x1b1c,
+		.product_id = 0x0c0b,
+		.device_id = 0xFF,
+		.name = "Lighting Node PRO",
+		.read_endpoint = 0x01 | LIBUSB_ENDPOINT_IN,
+		.read_endpoint = 0x01 | LIBUSB_ENDPOINT_OUT,
+		.driver = &corsairlink_driver_pro,
+		.led_control_count = 2, // two ports
+		.fan_control_count = 0,
+		.pump_index = 0,
+	},
+	{
+		.vendor_id = 0x1b1c,
+		.product_id = 0x0c0c,
+		.device_id = 0xFF,
+		.name = "Commander PRO",
+		.read_endpoint = 0x01 | LIBUSB_ENDPOINT_IN,
+		.read_endpoint = 0x01 | LIBUSB_ENDPOINT_OUT,
+		.driver = &corsairlink_driver_pro,
+		.led_control_count = 2, // two ports
+		.fan_control_count = 6,
+		.pump_index = 0,
+	},
+	{
+		.vendor_id = 0x1b1c,
 		.product_id = 0x1c00,
 		.device_id = 0xFF,
 		.name = "USB Dongle", /** H115i */

@@ -108,3 +108,15 @@ struct corsair_device_driver corsairlink_driver_dongle = {
     .write = corsairlink_rmi_write
 };
 
+struct corsair_device_driver corsairlink_driver_pro = {
+	.init = corsairlink_pro_init,
+	.deinit = corsairlink_pro_deinit,
+    .name = corsairlink_pro_name,
+    .vendor = corsairlink_pro_vendor,
+    .product = corsairlink_pro_product,
+    .device_id = corsairlink_pro_device_id,
+    .fw_version = corsairlink_pro_firmware_id,
+    .read = corsairlink_pro_read,
+    .write = corsairlink_pro_write
+};
+
